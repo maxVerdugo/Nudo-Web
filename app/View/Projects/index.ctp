@@ -23,7 +23,7 @@ array('controller' => 'projects', 'action' => 'view', $project['Project']['id'])
         <td><?php echo $project['Project']['num']?></td>
         <td><?php echo $project['Project']['creation']; ?></td>
         <td><?php echo $project['Project']['modification']; ?></td>
-       <td><?php echo count($project['RevitModel']); ?></td>
+       <td><?php echo count($project['models']); ?></td>
     </tr>
     <?php endforeach; ?>
     <?php unset($project); ?>
