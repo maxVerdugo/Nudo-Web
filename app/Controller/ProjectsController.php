@@ -7,4 +7,10 @@ class ProjectsController extends AppController {
     {
     	$this->set('projects', $this->Project->find('all'));
     }
+
+    public function view($id = null)
+    {
+    	$this->Project->id = $id;
+        $this->set('project', $this->Project->read());
+    }
 }

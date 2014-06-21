@@ -17,10 +17,13 @@
         <td><?php echo $project['Project']['id']; ?></td>
         <td>
             <?php echo $project['Project']['namevalue']?>
+            <?php echo $this->Html->link($project['Project']['namevalue'],
+array('controller' => 'projects', 'action' => 'view', $project['Project']['id'])); ?>
         </td>
         <td><?php echo $project['Project']['num']?></td>
         <td><?php echo $project['Project']['creationdate']; ?></td>
         <td><?php echo $project['Project']['modificationdate']; ?></td>
+
     </tr>
     <?php endforeach; ?>
     <?php unset($project); ?>
