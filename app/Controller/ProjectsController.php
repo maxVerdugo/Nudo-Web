@@ -7,4 +7,5 @@ class ProjectsController extends AppController {
     {
     	$this->set('projects', $this->Project->find('all'));
     }
+    
 }

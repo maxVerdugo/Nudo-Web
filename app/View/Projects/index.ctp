@@ -8,6 +8,7 @@
         <th>Number</th>
         <th>Creation Date</th>
         <th>Modification Date</th>
+        <th>N° Models</th>
     </tr>
 
     <!-- Here is where we loop through our $posts array, printing out post info -->
@@ -16,11 +17,12 @@
     <tr>
         <td><?php echo $project['Project']['id']; ?></td>
         <td>
-            <?php echo $project['Project']['namevalue']?>
+            <?php echo $project['Project']['name']?>
         </td>
         <td><?php echo $project['Project']['num']?></td>
-        <td><?php echo $project['Project']['creationdate']; ?></td>
-        <td><?php echo $project['Project']['modificationdate']; ?></td>
+        <td><?php echo $project['Project']['creation']; ?></td>
+        <td><?php echo $project['Project']['modification']; ?></td>
+       <td><?php echo count($project['RevitModel']); ?></td>
     </tr>
     <?php endforeach; ?>
     <?php unset($project); ?>
