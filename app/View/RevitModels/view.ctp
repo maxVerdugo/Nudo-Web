@@ -21,11 +21,12 @@
     <tr>
         <td> <?php echo $this->Html->link($family['name'],
 		array('controller' => 'families', 'action' => 'view', $family['id'])); ?></td>
-        <td><?php echo $family['category_id']; ?></td>
+        <td><?php echo $categories[$family['category_id']];?></td>
         <td><?php echo $family['creation']; ?></td>
         <td><?php echo $family['modification']; ?></td>
     </tr>
     <?php endforeach; ?>
     <?php unset($family); ?>
+    <?php unset($categories); ?>
     <?php unset($model); ?>
 </table>

@@ -3,12 +3,18 @@ App::uses('AppController', 'Controller');
 App::import('Model', 'Category');
 class RevitModelsController extends AppController {
     public $helpers = array('Html', 'Form');
-
     public function view($id = null)
     {
-    	//$categories = $this->Family->Category->find('list');
-    	$this->set(compact('categories'));
+    	$this->loadModel('Category');
+    	$this->loadModel('Family');
     	$this->RevitModel->id = $id;
-        $this->set('model', $this->RevitModel->read());
+    	$model = $this->RevitModel->find('first', array(
+    		'conditions' => array('RevitModel.id'=>$id)
+    		));
+    	$categories = $this->Category->find('list');
+    	$this->set('categories',$categories);
+    	$this->set('model',$model);
+    	print_r($categories);
+
     }
 }
