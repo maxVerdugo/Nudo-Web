@@ -1,11 +1,11 @@
 <?php
 App::uses('AppController', 'Controller');
-class FamiliesController extends AppController {
+class ElementsController extends AppController {
     public $helpers = array('Html', 'Form');
 
     public function view($id = null)
     {
-    	$this->Family->id = $id;
-        $this->set('family', $this->Family->read());
+    	$this->Element->id = $id;
+        $this->set('element', $this->Element->read());
     }
 }

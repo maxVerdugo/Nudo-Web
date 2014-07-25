@@ -1,3 +1,5 @@
+
+
 <h1><?php echo $model['RevitModel']['name']?></h1>
 
 <p><?php echo $model['RevitModel']['creation']?></p>
@@ -19,7 +21,7 @@
     <tr>
         <td> <?php echo $this->Html->link($family['name'],
 		array('controller' => 'families', 'action' => 'view', $family['id'])); ?></td>
-        <td><?php echo $family['Category']; ?></td>
+        <td><?php echo $family['category_id']; ?></td>
         <td><?php echo $family['creation']; ?></td>
         <td><?php echo $family['modification']; ?></td>
     </tr>
